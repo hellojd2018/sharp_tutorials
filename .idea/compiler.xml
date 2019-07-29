@@ -6,9 +6,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gateway-service-zuul" />
         <module name="hystrix" />
-        <module name="parent-boot-1" />
-        <module name="sharp_tutorials" />
       </profile>
     </annotationProcessing>
   </component>

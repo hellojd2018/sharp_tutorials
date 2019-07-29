@@ -6,12 +6,13 @@
 
   <groupId>com.hellojd</groupId>
   <artifactId>sharp_tutorials</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>sharp_tutorials</name>
   <url>http://www.example.com</url>
   <modules>
     <module>parent-boot-1</module>
-    <module>hystrix</module>
+    <module>gateway-service-zuul</module>
   </modules>
 
   <properties>
