@@ -4,6 +4,7 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway-service-zuul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hystrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/java_stream" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parent-boot-1" charset="UTF-8" />
   </component>
 </project>

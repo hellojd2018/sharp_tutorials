@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gateway-service-zuul" />
         <module name="hystrix" />
+        <module name="java_stream" />
       </profile>
     </annotationProcessing>
   </component>
