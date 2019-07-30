@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.junit.Test;
-
+import	java.util.Comparator;
 /**
  * @author zhaogy
  */
@@ -51,5 +51,29 @@ public class Chap01Test {
         Person[] peopes = names.stream().map(name -> name.split(" ")).map(Person::new)
             .toArray(Person[]::new);
         assertEquals(peopes.length,3);
+    }
+    @Test
+    public void test1_28(){
+        List<String> bonds = Arrays.asList("Connery", "Lazenby", "Moore", "Dalton","Brosnan","Craig");
+        //自然排序
+        String sorted = bonds.stream().sorted(Comparator.naturalOrder())
+            .collect(Collectors.joining(","));
+        //Brosnan,Connery,Craig,Dalton,Lazenby,Moore
+        //反向排序
+        sorted = bonds.stream().sorted(Comparator.reverseOrder())
+            .collect(Collectors.joining(","));
+        //Moore,Lazenby,Dalton,Craig,Connery,Brosnan
+         //按小写名称排序
+        sorted = bonds.stream().sorted(Comparator.comparing(String::toLowerCase))
+            .collect(Collectors.joining(","));
+        //Brosnan,Connery,Craig,Dalton,Lazenby,Moore
+    //按名称长度排序
+        sorted = bonds.stream().sorted(Comparator.comparingInt(String::length))
+            .collect(Collectors.joining(","));
+        //Moore,Craig,Dalton,Connery,Lazenby,Brosnan
+        //按名称长度排序，再按字典序排序
+        sorted = bonds.stream().sorted(Comparator.comparingInt(String::length)
+            .thenComparing(Comparator.naturalOrder()))
+            .collect(Collectors.joining(","));
     }
 }
