@@ -1,11 +1,9 @@
 package chap07.fileio;
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.stream.Stream;
-
 /**
  * 7.4 文件系统的检索
  */
