@@ -6,10 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="additional-sources-simple" />
+        <module name="basic-config" />
+        <module name="extra-configs" />
         <module name="gateway-service-zuul" />
         <module name="hystrix" />
         <module name="java_stream" />
+        <module name="jdbc-config" />
+        <module name="spring-zuul-foos-resource" />
+        <module name="spring-zuul-ui" />
+        <module name="zuul-simple-webapp" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zuul-simple-webapp" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

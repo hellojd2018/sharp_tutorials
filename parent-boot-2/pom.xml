@@ -6,17 +6,14 @@
         <groupId>com.baeldung</groupId>
         <artifactId>parent-modules</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../parent-modules</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>parent-boot-1</artifactId>
+
+    <groupId>com.baeldung</groupId>
+    <artifactId>parent-boot-2</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <properties>
-        <rest-assured.version>3.1.0</rest-assured.version>
-        <spring-boot.version>1.5.10.RELEASE</spring-boot.version>
-    </properties>
-    <modules>
-        <module>../hystrix</module>
-    </modules>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -32,7 +29,6 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>${rest-assured.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -48,10 +44,39 @@
                     <groupId>org.springframework.boot</groupId>
                     <artifactId>spring-boot-maven-plugin</artifactId>
                     <version>${spring-boot.version}</version>
+                    <configuration>
+                        <mainClass>${start-class}</mainClass>
+                        <!-- this is necessary as we're not using the Boot parent -->
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
     </build>
-
-
+    <profiles>
+        <profile>
+            <id>thin-jar</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                        <dependencies>
+                            <!-- The following enables the "thin jar" deployment option. -->
+                            <dependency>
+                                <groupId>org.springframework.boot.experimental</groupId>
+                                <artifactId>spring-boot-thin-layout</artifactId>
+                                <version>${thin.version}</version>
+                            </dependency>
+                        </dependencies>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+    <properties>
+        <rest-assured.version>3.3.0</rest-assured.version>
+        <!-- plugins -->
+        <thin.version>1.0.22.RELEASE</thin.version>
+        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+    </properties>
 </project>

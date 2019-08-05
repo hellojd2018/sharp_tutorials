@@ -6,5 +6,18 @@
     <file url="file://$PROJECT_DIR$/hystrix" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/java_stream" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/parent-boot-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent-boot-2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/parent-modules" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/spring-cloud-archaius" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/spring-cloud-archaius/additional-sources-simple" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/spring-cloud-archaius/basic-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/spring-cloud-archaius/extra-configs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-cloud/spring-cloud-archaius/jdbc-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-zuul/spring-zuul-foos-resource" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-zuul/spring-zuul-ui" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-zuul/zuul-simple-webapp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-zuul/zuul-simple-webapp" charset="UTF-8" />
   </component>
 </project>
